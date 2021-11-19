@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<!-- FOR ASSIGNMENT 3: As you can see, right now I am using CSS Grids to design the layout for my site
+	For the color pallete i just decided to go with a simple monochromatic black, gray, and white, with accents of red (on hover hyperlinks)
+	the hex value for the colors are: #000000 black, rgba(255, 255, 255, 0.8)/ #778899 the hex is as close as i could find because the gray on this site is made using transparency, #ffffff white, #ff0000 red.
+	As for fonts, because this site is going to be oriented towards skaters, i decided to go with a somewhat legible graffiti style font
+	font size depends on screen size for h1 tags, and everything in body grid containers is 30px. Both of these are site-wide. -->
+<head>
+<meta charset="utf-8">
+<title>ShittyGhrip - Custom Griptape</title>
+<style>
+	.item1 { grid-area: header; }
+	.item2 { grid-area: menu; }
+	.item3 { grid-area: main; }
+	.item4 { grid-area: right; }
+	.item5 { grid-area: footer; }
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+		'header header header header header header'
+		'menu main main main right right'
+		'menu footer footer footer footer footer';
+	grid-gap: 10px;
+	background-color: rgba(85,85,85,0.20);
+	padding: 10px;
+}
+
+.grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+}
+	header {
+		font-family: 'MARSNEVENEKSK Clean';
+		font-size: 8vh;
+		text-align: center;
+	}
+@media only screen and (max-width: 1080px){
+	header {
+		font-family: 'MARSNEVENEKSK Clean';
+		font-size: 6vw;
+		text-align: center;
+		}
+	}
+	a {
+  		color: black;
+  		background-color: transparent;
+  		text-decoration: none;
+		}
+	a:hover {
+		color: red;
+	}
+	body {
+		font-family: 'MARSNEVENEKSK Clean';
+		}
+</style>
+</head>
+
+<header>
+	<h1>"((shittyghrip))"</h1>
+</header>
+<body>
+	<div class="grid-container">
+	<div class="item1" align="left">
+		(Navigation) {home} <a href="about/about.html">(about)</a> <a href="shop.html">(shop)</a> <a href="contact.html">(contact) </a></div>
+	<div class="item2">
+		Menu
+		</div>
+	<div class="item3">
+		Welcome to ShittyGhrip <br>
+		we sell custom griptape <br>
+		as well as doing commision work
+		</div>  
+	<div class="item4">
+		This will be designated for <br>
+		testimonials/ reviews.
+	  </div>
+	<div class="item5">
+		Footer
+		</div>
+</div>
+
+</body>
+</html>
